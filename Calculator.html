@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	  <head>
+	  <title>Evans Calculator</title>
+		      <style>
+		              body {
+
+                      background-color: #FF0000;
+
+			          font: 90% impact, helvetica, sans-serif;
+					  font color: #00FF00
+			          margin: 0px 0px 0px 20px;
+		              }
+					  .container{
+						position: absolute;
+						top: 325px;
+					  }
+			          .gridWrapper{
+							background-color: #FF0000;
+			                display: grid;
+				            border: 2px;
+				            grid-template-columns: auto auto auto;
+				            xwidth: 375px;
+			          }
+		
+			          .gridOperator{
+				              display: grid;
+				              grid-template-columns: auto;
+				              width: 125px;
+				              border: 2px;
+				              border-style: solid;
+				              position: absolute;
+				              top: 0px;
+				              left: 450px;
+			          }
+			          .gridItem{
+			                  width: 125px;
+				              text-align: center;
+				              margin: 10px;
+				              padding: 10px;
+			          }
+					  
+		       </style>
+		
+		       <script type="text/javaScript">
+					function addNumb(x){
+						var signValue = document.getElementById("sign").innerHTML;
+						if(signValue == '?'){
+							var prevValue = document.getElementById("first").innerHTML;
+							x = (prevValue * 10) + x;
+							document.getElementById("first").innerHTML = x;
+						}else{
+							var prevValue = document.getElementById("second").innerHTML;
+							x = (prevValue * 10) + x;
+							document.getElementById("second").innerHTML = x;
+						}
+					}
+				   function operator(symb){
+						   document.getElementById("sign").innerHTML = symb;
+				   }
+				   function clearEntry(){
+					document.getElementById("sign").innerHTML = '?';
+					document.getElementById("answer").innerHTML = 'ans';
+					document.getElementById("first").innerHTML = '0';
+					document.getElementById("second").innerHTML = '0';
+			
+				   }
+					function calc(){
+							var result = 0;
+							var a = Number(document.getElementById("first").innerHTML);
+							var b = Number(document.getElementById("second").innerHTML);
+							var z = document.getElementById("sign").innerHTML;
+						
+							if(z == '+'){
+									result = a + b;
+							}
+							if(z == '-'){
+									result = a - b;
+							}
+							if(z == '*'){
+									result = a * b;
+							}
+							if(z == '/'){
+									result = a / b;
+							}
+							document.getElementById("answer").innerHTML = result;
+					}
+				</script>
+	</head>
+	<body>
+	    <h1>Evans Calculator</h1>
+		<div>
+		<div id="first" class="number">0</div>
+	
+		<div id="sign" class="sig">?</div>
+		
+		<div id="second" class="number">0</div>
+		
+		<div id="answer" class="number">ans</div>
+		</div>
+	<div class="container">
+		<div class="gridWrapper">
+		        <div class="gridItem" onclick="addNumb(1)">1</div>
+		        <div class="gridItem" onclick="addNumb(2)">2</div>
+		        <div class="gridItem" onclick="addNumb(3)">3</div>  
+		        <div class="gridItem" onclick="addNumb(4)">4</div>
+		        <div class="gridItem" onclick="addNumb(5)">5</div>
+		        <div class="gridItem" onclick="addNumb(6)">6</div>
+                <div class="gridItem" onclick="addNumb(7)">7</div>	
+                <div class="gridItem" onclick="addNumb(8)">8</div>	
+                <div class="gridItem" onclick="addNumb(9)">9</div>	
+		        <div class="gridItem">&nbsp;</div>
+		        <div class="gridItem" onclick="addNumb(0)">0</div>
+                <div class="gridItem" onclick="clearEntry()">c</div>	
+		</div>
+        <div class="gridOperator">
+		        <div class="gridItem" onclick="operator('+')">+</div>
+		        <div class="gridItem" onclick="operator('-')">-</div>
+		        <div class="gridItem" onclick="operator('-')">*</div>
+		        <div class="gridItem" onclick="operator('-')">/</div>
+		        <div class="gridItem" onclick="calc()">=</div>
+		</div>
+	</div>	
+	</body>
+</html> 
