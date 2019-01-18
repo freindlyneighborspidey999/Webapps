@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Evans webpage</title>
+<style>
+ .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+.dropdown-content a:hover {background-color: Hotpink}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: HotPink;
+}
+</style>
+<style>
+* {
+  box-sizing: border-box;
+}
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+/* Header/logo Title */
+header {
+  padding: 80px;
+  text-align: center;
+  background: green;
+  color: white;
+}
+/* Increase the font size of the heading */
+header h1 {
+  font-size: 40px;
+}
+/* Style the top navigation bar */
+nav {
+  overflow: visible;
+  background-color: white;
+}
+/* Style the navigation bar links */
+nav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+/* Right-aligned link */
+nav a.right {
+  float: right;
+}
+/* Change color on hover */
+nav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+/* Column container */
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/right column */
+aside {
+  flex: 30%;
+  background-color: green;
+  padding: 20px;
+}
+/* content column */
+article {   
+  flex: 70%;
+  background-color: green;
+  padding: 20px;
+}
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+/* Footer */
+footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+</style>
+<script>
+function displayDate() {
+  document.getElementById("demo").innerHTML = Date();
+}
+</script>
+<p id="demo"></p>
+</head>
+<body>
+
+<header>
+  <h1>Evans website</h1>
+  <p>hello and welcome</p>
+  <p>feel free to look around</p>
+  <button onclick="displayDate()">current time</button>
+</header>
+
+<nav>
+ <nav class="dropdown"
+  <span>menu</span>
+  <nav class="dropdown-content">
+    <a href="https://www.youtube.com/watch?v=JsEtra-E8B4">video</a>
+</nav>
+<main>
+  <article>
+    <h2>my photos</h2>
+    <h5>January 15,2019</h5>
+    <div class="img" style="height:200px;"></div>
+    <img src="images/warehouse.jpg" style="height:350px;">
+	
+    <p>a simple warehouse outside of laconia</p>
+    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    <br>
+    <h2>my photos</h2>
+    <h5>January 2,2019</h5>
+	 <div class="img" style="height:200px;"></div>
+    <img src="images/bridge.jpg" style="height:350px;">
+	
+    <p>a picture of a dam in downtown laconia</p>
+    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+  </article>
+  <aside>
+    <h2>About Me</h2>
+    <h5>Photo of me:</h5>
+    <div class="img" style="height:200px;"></div>
+	<img src="images/evan.jpg" style="height:350px;">
+    <p>Im 17 yrs old and my birthday is on Jan 26 </p>
+    <h3>More about me</h3>
+    <p>My favorite hobbies are playing video games and watching youtube</p>
+    <div class="img" style="height:60px;"></div><br>
+	<img src="images/will-the-ps4.jpg" style="height:150px;">
+	<div class="img" style="height:60px;"></div><br>
+	<img src="images/youtube.jpg" style="height:170px;">
+	
+  </aside>
+</main>
+
+<footer>
+	   <p>Created by: Evan Fields</p>
+	   <p>Contact information:Vaporkiller85@gmail.com <a href="mailto:Vaporkiller85@gmail.com">
+	   
+</footer>
+
+</body>
+</html>
